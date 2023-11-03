@@ -1,0 +1,5 @@
+# add the following to your sqlnet.ora file
+ENCRYPTION_WALLET_LOCATION =  
+(SOURCE =
+ (METHOD = FILE)  (METHOD_DATA =
+ (DIRECTORY = /u01/app/oracle/oradata/ORADB/keystore)))
