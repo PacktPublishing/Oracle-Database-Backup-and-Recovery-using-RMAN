@@ -1,0 +1,40 @@
+# add the following in the VMs: srv1 and winsrv2:
+
+ORADB =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = srv1)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = ORADB.localdomain)
+    )
+  )
+
+ORAWIN =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = winsrv2)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = ORAWIN.localdomain)
+    )
+  )
+
+
+# add the following in the hosting PC:
+# change the IP address to match your env
+ORADB =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.163)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = ORADB.localdomain)
+    )
+  )
+
+ORAWIN =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.115)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = ORAWIN.localdomain)
+    )
+  )

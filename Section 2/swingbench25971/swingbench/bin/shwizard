@@ -1,0 +1,3 @@
+#!/bin/sh
+cd `dirname "$0"`
+java -mx450m -cp ../launcher LauncherBootstrap -executablename shwizard shwizard -c shwizard.xml $*

@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SwingBenchConfiguration xmlns="http://www.dominicgiles.com/swingbench/config">
+   <Name>Stress Test</Name>
+   <Comment></Comment>
+   <Connection>
+      <UserName>soe</UserName>
+      <Password>soe</Password>
+      <ConnectString>//oraclelinux/DOM102</ConnectString>
+      <DriverType>Oracle10g Type IV jdbc driver (thin)</DriverType>
+   </Connection>
+   <Load>
+      <NumberOfUsers>4</NumberOfUsers>
+      <MinDelay>0</MinDelay>
+      <MaxDelay>0</MaxDelay>
+      <QueryTimeout>0</QueryTimeout>
+      <MaxTransactions>0</MaxTransactions>
+      <RunTime>0:0</RunTime>
+      <LogonDelay>0</LogonDelay>
+      <LogOutPostTransaction>false</LogOutPostTransaction>
+      <WaitTillAllLogon>false</WaitTillAllLogon>
+      <TransactionList>
+         <Transaction>
+            <Id>Insert Transaction</Id>
+            <ShortName>I</ShortName>
+            <ClassName>com.dom.benchmarking.swingbench.stresstest.StressTestInsert</ClassName>
+            <Weight>15</Weight>
+            <Enabled>true</Enabled>
+         </Transaction>
+         <Transaction>
+            <Id>Simple Select</Id>
+            <ShortName>S</ShortName>
+            <ClassName>com.dom.benchmarking.swingbench.stresstest.StressTestSelect</ClassName>
+            <Weight>40</Weight>
+            <Enabled>true</Enabled>
+         </Transaction>
+         <Transaction>
+            <Id>Update Transaction</Id>
+            <ShortName>U</ShortName>
+            <ClassName>com.dom.benchmarking.swingbench.stresstest.StressTestUpdate</ClassName>
+            <Weight>30</Weight>
+            <Enabled>true</Enabled>
+         </Transaction>
+         <Transaction>
+            <Id>Delete Transaction</Id>
+            <ShortName>D</ShortName>
+            <ClassName>com.dom.benchmarking.swingbench.stresstest.StressTestDelete</ClassName>
+            <Weight>10</Weight>
+            <Enabled>true</Enabled>
+         </Transaction>
+      </TransactionList>
+   </Load>
+   <Preferences>
+      <StartMode>manual</StartMode>
+      <Output>swingbench</Output>
+      <JumpToEvents>true</JumpToEvents>
+      <TimingsIncludeSleep>false</TimingsIncludeSleep>
+      <TimingsIn>microseconds</TimingsIn>
+      <StatisticsLevel>simple</StatisticsLevel>
+      <OutputFile>results.xml</OutputFile>
+      <Charts DefaultChart="Overview">
+         <Chart>
+            <Name>Transactions Per Minute</Name>
+            <MaximumValue>-1</MaximumValue>
+            <Autoscale>true</Autoscale>
+            <Logarithmic>false</Logarithmic>
+         </Chart>
+         <Chart>
+            <Name>Transaction Response Time</Name>
+            <MaximumValue>-1</MaximumValue>
+            <Autoscale>true</Autoscale>
+            <Logarithmic>true</Logarithmic>
+         </Chart>
+         <Chart>
+            <Name>DML Operations Per Minute</Name>
+            <MaximumValue>-1</MaximumValue>
+            <Autoscale>true</Autoscale>
+            <Logarithmic>false</Logarithmic>
+         </Chart>
+      </Charts>
+      <AllowedErrorCodes/>
+      <RefreshRate>1</RefreshRate>
+   </Preferences>
+</SwingBenchConfiguration>
