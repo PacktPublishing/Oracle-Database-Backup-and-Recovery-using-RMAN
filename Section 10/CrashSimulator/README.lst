@@ -1,0 +1,25 @@
+Thank you so much for trying CrashSimulator.
+
+Please find with this download , 4 files:
+
+- CrashSimulator_Low_White.sh.x - Low resolution version for White Background SSH Emulator
+- CrashSimulator_Low.sh.x - Low resolution version for Black Background SSH Emulator
+- CrashSimulator_White.sh.x - High resolution (all menus at one screen) for White Background SSH Emulator
+- CrashSimulator.sh.x - High resolution (all menus at one screen) for Black Background SSH Emulator
+
+Please ensure your Oracle variables are set (. oraenv) , that you are connected to the oracle OS account at the server where
+your database is running.
+
+To run the product, please execute as Oracle:
+
+- ./CrashSimulator_Low_White.sh.x
+- ./CrashSimulator_Low.sh.x
+- ./CrashSimulator_White.sh.x
+- ./CrashSimulator.sh.x
+
+
+Once again, thank you for downloading CrashSimulator and please follow me on Twitter [fcomunoz] to be aware of new version, tips and tricks!
+
+Francisco Munoz Alvarez
+Oracle ACE DIrector
+President of NZOUG, IAOUG, APACOUC and CLOUG
